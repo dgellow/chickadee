@@ -2,7 +2,7 @@
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
-name: Check NextJs build
+name: CI build
 
 on:
   # Runs on pushes targeting the default branch
@@ -45,5 +45,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: lint
+        run: yarn lint
       - name: Build with Next.js
         run: yarn build
