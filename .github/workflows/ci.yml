@@ -30,15 +30,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+          node-version: "14"
       - name: lint
         run: yarn lint
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
       - name: build
         run: yarn build
       - name: deploy
         run: yarn deploy
         env:
-          DEPLOY_API_KEY: ${{ secrets.DEPLOY_API_KEY }}
+          DEPLOY_API_KEY: ${{ secrets.DEPLOY_KEY }}
           DEPLOY_ENV: production
