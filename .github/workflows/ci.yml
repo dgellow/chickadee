@@ -47,5 +47,9 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: lint
         run: yarn lint
-      - name: Build with Next.js
+      - name: build
         run: yarn build
+      - name: deploy
+        run: yarn deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
