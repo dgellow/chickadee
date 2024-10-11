@@ -40,5 +40,5 @@ jobs:
       - name: deploy
         run: yarn deploy
         env:
-          DEPLOY_API_KEY: ${{ secrets.DEPLOY_KEY }}
+          DEPLOY_API_KEY: ${{ secrets.DEPLOY_API_KEY }}
           DEPLOY_ENV: production
