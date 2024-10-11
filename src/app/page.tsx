@@ -31,7 +31,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             Read our docs
-          </a>
+          </a> 
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
