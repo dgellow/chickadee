@@ -8,7 +8,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-    
+
   pull_request:
 
   # Allows you to run this workflow manually from the Actions tab
@@ -31,10 +31,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "14"
-      - name: lint
-        run: yarn lint
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: lint
+        run: yarn lint
       - name: build
         run: yarn build
       - name: deploy
